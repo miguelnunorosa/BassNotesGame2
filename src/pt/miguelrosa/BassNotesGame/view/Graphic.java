@@ -1,7 +1,7 @@
 package pt.miguelrosa.BassNotesGame.view;
 
 
-public class GraphicEN {
+public class Graphic {
 
 
     /**

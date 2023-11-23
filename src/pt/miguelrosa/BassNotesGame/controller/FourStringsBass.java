@@ -9,8 +9,8 @@ import java.util.Scanner;
 
 public class FourStringsBass {
 
-    private static NoteController noteController = new NoteController();
-    private static GameTexts gameTexts = new GameTexts();
+    private final NoteController noteController = new NoteController();
+    private final GameTexts gameTexts = new GameTexts();
     private static String insertedAnswer;
 
 
@@ -18,26 +18,26 @@ public class FourStringsBass {
     public static void mainGame(int manyStrings){
         Scanner playerAnswer = new Scanner(System.in);
 
-        int pickedBassString = noteController.getStringFromSpecificBass(manyStrings); //CPU select random string
-        int pickedBassFret   = noteController.getFretFromBassFretboard();    //CPU select random fret
+        int pickedBassString = NoteController.getStringFromSpecificBass(manyStrings); //CPU select random string
+        int pickedBassFret   = NoteController.getFretFromBassFretboard();    //CPU select random fret
 
 
         System.out.println("\nWhich note: String (" + pickedBassString + ") | Fret (" + pickedBassFret + ")");
-        System.out.print(gameTexts.TXT_ANSWER);
+        System.out.print(GameTexts.TXT_ANSWER);
         insertedAnswer = playerAnswer.nextLine().toUpperCase();
 
         switch (pickedBassString) {
             case 1: //corda (E) Mi
-                noteController.guessNoteStringE(insertedAnswer, pickedBassFret);
+                NoteController.guessNoteStringE(insertedAnswer, pickedBassFret);
                 break;
             case 2: //corda (A) La
-                noteController.guessNoteStringA(insertedAnswer, pickedBassFret);
+                NoteController.guessNoteStringA(insertedAnswer, pickedBassFret);
                 break;
             case 3: //corda (D) Re
-                noteController.guessNoteStringD(insertedAnswer, pickedBassFret);
+                NoteController.guessNoteStringD(insertedAnswer, pickedBassFret);
                 break;
             case 4: //corda (G) Sol
-                noteController.guessNoteStringG(insertedAnswer, pickedBassFret);
+                NoteController.guessNoteStringG(insertedAnswer, pickedBassFret);
                 break;
         }
     }

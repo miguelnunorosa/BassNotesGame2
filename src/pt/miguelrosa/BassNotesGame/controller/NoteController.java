@@ -21,7 +21,6 @@ public class NoteController {
 
 
 
-
     /**
      * Method for randomly choosing (between 1 and 12) the position on the instrument neck
      */
@@ -73,7 +72,7 @@ public class NoteController {
 
 
     /**
-     * Method that checks whether the player hit the note indicated for the D string (in portuguese 'corda LÁ')
+     * Method that checks whether the player hit the note indicated for the A string (in portuguese 'corda LÁ')
      *
      * @param pickedBassFret Indicates the choice of position on the instrument neck
      * @param playerAnswer get the players answer
@@ -88,7 +87,7 @@ public class NoteController {
 
 
     /**
-     * Method that checks whether the player hit the note indicated for the D string (in portuguese 'corda MI')
+     * Method that checks whether the player hit the note indicated for the E string (in portuguese 'corda MI')
      *
      * @param pickedBassFret Indicates the choice of position on the instrument neck
      * @param playerAnswer get the players answer
@@ -115,42 +114,6 @@ public class NoteController {
             System.out.println(gameTexts.TXT_WRONG_ANSWER + notes.getBStringAscPosition(pickedBassFret));
         }
     }
-
-
-
-
-   public void checkGuessedNote(int IaPickedBassString, int IaPickedBassFret, String userInsertedAnswer){
-
-       switch (IaPickedBassString) {
-           case 0: //corda (E) Mi
-               guessNoteStringB(userInsertedAnswer, IaPickedBassFret);
-               break;
-           case 1: //corda (E) Mi
-               guessNoteStringE(userInsertedAnswer, IaPickedBassFret);
-               break;
-           case 2: //corda (A) La
-               guessNoteStringA(userInsertedAnswer, IaPickedBassFret);
-               break;
-           case 3: //corda (D) Re
-               guessNoteStringD(userInsertedAnswer, IaPickedBassFret);
-               break;
-           case 4: //corda (G) Sol
-               guessNoteStringG(userInsertedAnswer, IaPickedBassFret);
-               break;
-       }
-
-
-
-   }
-
-
-
-
-
-
-
-
-
 
 
 

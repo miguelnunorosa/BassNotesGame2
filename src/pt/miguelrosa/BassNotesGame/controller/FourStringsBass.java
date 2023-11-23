@@ -24,7 +24,7 @@ public class FourStringsBass {
 
         System.out.println("\nWhich note: String (" + pickedBassString + ") | Fret (" + pickedBassFret + ")");
         System.out.print(gameTexts.TXT_ANSWER);
-        insertedAnswer = playerAnswer.nextLine();
+        insertedAnswer = playerAnswer.nextLine().toUpperCase();
 
         switch (pickedBassString) {
             case 1: //corda (E) Mi

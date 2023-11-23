@@ -35,7 +35,12 @@ public class Game {
                 settings.clearScreen();
                 askHowManyStrings();
                 gameWithSelectedBass(manyStrings);
-
+            case 2:
+                graphics.showNotes();
+                break;
+            case 3:
+                graphics.howToPlay();
+                break;
             case 0:
                 System.exit(0);
         }

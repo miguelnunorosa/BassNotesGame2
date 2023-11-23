@@ -25,7 +25,7 @@ public class Graphic {
     /**
      * Method to draw help menu (explains how to play)
      */
-    public void help(){
+    public void howToPlay(){
         System.out.println("# ========================================= #");
         System.out.println("#             Bass Notes Memory             #");
         System.out.println("#                                           #");

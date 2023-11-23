@@ -24,25 +24,9 @@ public class FiveStringsBass {
 
         System.out.println("\nWhich note: String (" + pickedBassString + ") | Fret (" + pickedBassFret + ")");
         System.out.print(gameTexts.TXT_ANSWER);
-        insertedAnswer = playerAnswer.nextLine();
+        insertedAnswer = playerAnswer.nextLine().toUpperCase();
 
-        switch (pickedBassString) {
-            case 0: //corda (E) Mi
-                noteController.guessNoteStringB(insertedAnswer, pickedBassFret);
-                break;
-            case 1: //corda (E) Mi
-                noteController.guessNoteStringE(insertedAnswer, pickedBassFret);
-                break;
-            case 2: //corda (A) La
-                noteController.guessNoteStringA(insertedAnswer, pickedBassFret);
-                break;
-            case 3: //corda (D) Re
-                noteController.guessNoteStringD(insertedAnswer, pickedBassFret);
-                break;
-            case 4: //corda (G) Sol
-                noteController.guessNoteStringG(insertedAnswer, pickedBassFret);
-                break;
-        }
+        noteController.checkGuessedNote(pickedBassString, pickedBassFret, insertedAnswer);
     }
 
 

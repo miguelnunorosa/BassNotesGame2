@@ -30,7 +30,6 @@ public class NoteController {
     }
 
 
-
     public static int getStringFromSpecificBass(int manyStrings){
 
         if(manyStrings == 4){
@@ -41,7 +40,6 @@ public class NoteController {
         }
 
     }
-
 
 
     /**
@@ -117,6 +115,47 @@ public class NoteController {
             System.out.println(gameTexts.TXT_WRONG_ANSWER + notes.getBStringAscPosition(pickedBassFret));
         }
     }
+
+
+
+
+   public void checkGuessedNote(int IaPickedBassString, int IaPickedBassFret, String userInsertedAnswer){
+
+       switch (IaPickedBassString) {
+           case 0: //corda (E) Mi
+               guessNoteStringB(userInsertedAnswer, IaPickedBassFret);
+               break;
+           case 1: //corda (E) Mi
+               guessNoteStringE(userInsertedAnswer, IaPickedBassFret);
+               break;
+           case 2: //corda (A) La
+               guessNoteStringA(userInsertedAnswer, IaPickedBassFret);
+               break;
+           case 3: //corda (D) Re
+               guessNoteStringD(userInsertedAnswer, IaPickedBassFret);
+               break;
+           case 4: //corda (G) Sol
+               guessNoteStringG(userInsertedAnswer, IaPickedBassFret);
+               break;
+       }
+
+
+
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

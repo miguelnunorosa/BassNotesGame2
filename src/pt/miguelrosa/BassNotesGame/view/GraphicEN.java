@@ -90,9 +90,9 @@ public class GraphicEN {
         System.out.println("#                                           #");
         System.out.println("# github.com/miguelnunorosa/BassNotesGame2  #");
         System.out.println("#                                           #");
-        System.out.println("# 'Projeto realizado para consolidar        #");
-        System.out.println("#  conhecimentos. Qualquer feedback é       #");
-        System.out.println("#  bem vindo afim de melhorar. Obrigado.'   #");
+        System.out.println("#   Project to recycle knowledge such as    #");
+        System.out.println("#  MVC pattern and OOP. Any suggestions     #");
+        System.out.println("#  are welcome. Thanks.                     #");
         System.out.println("#                                           #");
         System.out.println("# ========================================= #");
     }

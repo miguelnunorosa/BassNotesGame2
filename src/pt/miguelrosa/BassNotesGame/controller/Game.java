@@ -14,6 +14,7 @@ public class Game {
     private static final Settings settings = new Settings();
     private static final FourStringsBass fourStringsBass = new FourStringsBass();
     private static final FiveStringsBass fiveStringsBass = new FiveStringsBass();
+    private static final NoteController noteController = new NoteController();
 
     private static int manyStrings;
 
@@ -72,7 +73,8 @@ public class Game {
         if(manyStrings == 4) {
             do {
                 settings.clearScreen();
-                fourStringsBass.mainGame(manyStrings);
+                FourStringsBass.mainGame(manyStrings);
+                //noteController.checkGuessedNote(fourStringsBass.getPickedBassString());
             } while (true);
         }else{
             do {

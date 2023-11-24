@@ -52,7 +52,7 @@ public class NoteController {
      * @param playerAnswer get the players answer
      */
     public static void guessNoteStringG(String playerAnswer, int pickedBassFret){
-        if( playerAnswer.equals( notes.getGStringAscPosition(pickedBassFret) ) ) {
+        if( playerAnswer.equals( notes.getGStringAscPosition(pickedBassFret) ) || playerAnswer.equals( notes.getGStringDscPosition(pickedBassFret) ) ) {
             System.out.println(gameTexts.TXT_RIGHT_ANSWER);
             isCorrect = true;
         }else{
@@ -68,7 +68,7 @@ public class NoteController {
      * @param playerAnswer get the players answer
      */
     public static void guessNoteStringD(String playerAnswer, int pickedBassFret){
-        if( playerAnswer.equals( notes.getDStringAscPosition(pickedBassFret) ) ) {
+        if( playerAnswer.equals( notes.getDStringAscPosition(pickedBassFret) ) || playerAnswer.equals( notes.getDStringDscPosition(pickedBassFret) ) ) {
             System.out.println(gameTexts.TXT_RIGHT_ANSWER);
             isCorrect = true;
         }else{
@@ -84,7 +84,7 @@ public class NoteController {
      * @param playerAnswer get the players answer
      */
     public static void guessNoteStringA(String playerAnswer, int pickedBassFret){
-        if( playerAnswer.equals( notes.getAStringAscPosition(pickedBassFret) ) ) {
+        if( playerAnswer.equals( notes.getAStringAscPosition(pickedBassFret) ) || playerAnswer.equals( notes.getAStringDscPosition(pickedBassFret) ) ) {
             System.out.println(gameTexts.TXT_RIGHT_ANSWER);
             isCorrect = true;
         }else{
@@ -100,7 +100,7 @@ public class NoteController {
      * @param playerAnswer get the players answer
      */
     public static void guessNoteStringE(String playerAnswer, int pickedBassFret){
-        if( playerAnswer.equals( notes.getEStringAscPosition(pickedBassFret) ) ) {
+        if( playerAnswer.equals( notes.getEStringAscPosition(pickedBassFret) ) || playerAnswer.equals( notes.getEStringDscPosition(pickedBassFret) ) ) {
             System.out.println(gameTexts.TXT_RIGHT_ANSWER);
             isCorrect = true;
         }else{
@@ -116,7 +116,7 @@ public class NoteController {
      * @param playerAnswer get the players answer
      */
     public static void guessNoteStringB(String playerAnswer, int pickedBassFret){
-        if( playerAnswer.equals( notes.getBStringAscPosition(pickedBassFret) ) ) {
+        if( playerAnswer.equals( notes.getBStringAscPosition(pickedBassFret) ) || playerAnswer.equals( notes.getBStringDscPosition(pickedBassFret) ) ) {
             System.out.println(gameTexts.TXT_RIGHT_ANSWER);
             isCorrect = true;
         }else{

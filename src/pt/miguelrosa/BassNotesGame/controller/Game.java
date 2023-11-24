@@ -12,8 +12,8 @@ public class Game {
 
     private static final Graphic graphics = new Graphic();
     private static final Settings settings = new Settings();
-    private static final FourStringsBass fourStringsBass = new FourStringsBass();
-    private static final FiveStringsBass fiveStringsBass = new FiveStringsBass();
+    private static final FourStringsBassController fourStringsBass = new FourStringsBassController();
+    private static final FiveStringsBassController fiveStringsBass = new FiveStringsBassController();
     private static final NoteController noteController = new NoteController();
 
     private static int manyStrings;
@@ -73,8 +73,8 @@ public class Game {
         if(manyStrings == 4) {
             do {
                 settings.clearScreen();
-                FourStringsBass.mainGame(manyStrings);
-                //noteController.checkGuessedNote(fourStringsBass.getPickedBassString());
+                fourStringsBass.mainGame(manyStrings);
+                showScore();
             } while (true);
         }else{
             do {
@@ -85,6 +85,11 @@ public class Game {
 
     }
 
+
+    private void showScore(){
+        System.out.println("In " + fourStringsBass.getCountShowedNotes() + " notes, you answer correctly " + fourStringsBass.getCountUserCorrectAnswers() + " times.");
+        noteController.setIsCorrect(false);
+    }
 
 
 }

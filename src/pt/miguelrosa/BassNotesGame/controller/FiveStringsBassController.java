@@ -7,26 +7,31 @@ import java.util.Scanner;
 
 
 
-public class FourStringsBass {
+public class FiveStringsBassController {
 
-    private final NoteController noteController = new NoteController();
-    private final GameTexts gameTexts = new GameTexts();
-    private static String insertedAnswer;
-
+    private static NoteController noteController = new NoteController();
+    private static GameTexts gameTexts = new GameTexts();
 
 
-    public static void mainGame(int manyStrings){
+
+    public void mainGame(int manyStrings){
         Scanner playerAnswer = new Scanner(System.in);
+        String insertedAnswer;
+        int pickedBassString, pickedBassFret;
 
-        int pickedBassString = NoteController.getStringFromSpecificBass(manyStrings); //CPU select random string
-        int pickedBassFret   = NoteController.getFretFromBassFretboard();    //CPU select random fret
+
+        pickedBassString = noteController.getStringFromSpecificBass(manyStrings); //CPU select random string
+        pickedBassFret   = noteController.getFretFromBassFretboard();             //CPU select random fret
 
 
         System.out.println("\nWhich note: String (" + pickedBassString + ") | Fret (" + pickedBassFret + ")");
-        System.out.print(GameTexts.TXT_ANSWER);
+        System.out.print(gameTexts.TXT_ANSWER);
         insertedAnswer = playerAnswer.nextLine().toUpperCase();
 
         switch (pickedBassString) {
+            case 0: //corda (B) Si
+                NoteController.guessNoteStringB(insertedAnswer, pickedBassFret);
+                break;
             case 1: //corda (E) Mi
                 NoteController.guessNoteStringE(insertedAnswer, pickedBassFret);
                 break;
@@ -41,6 +46,7 @@ public class FourStringsBass {
                 break;
         }
     }
+
 
 
 }
